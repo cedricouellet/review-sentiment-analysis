@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.6.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+  <ItemGroup Label="ReviewSentimentModel">
+    <None Include="ReviewSentimentModel.consumption.cs">
+      <DependentUpon>ReviewSentimentModel.mbconfig</DependentUpon>
+    </None>
+    <None Include="ReviewSentimentModel.training.cs">
+      <DependentUpon>ReviewSentimentModel.mbconfig</DependentUpon>
+    </None>
+    <None Include="ReviewSentimentModel.zip">
+      <DependentUpon>ReviewSentimentModel.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

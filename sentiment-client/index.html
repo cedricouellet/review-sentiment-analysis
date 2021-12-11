@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sentiment Review</title>
+
+    <script src="./src/js/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="./src/css/styles.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app" class="container">
+        <h1>Review Sentiment Prediction</h1>
+
+        <div>
+            <label for="reviewInput">Review</label>
+            <input class="form-control" type="text" name="reviewInput" id="reviewInput"><br />
+            <button id="predictButton" class="btn btn-primary">Predict</button>
+        </div>
+
+        <hr />
+
+        <div id="prediction" class="hidden">
+            <h3>Prediction</h3>
+            <ul>
+                <li>Review: <span id="review"></span></li>
+                <li>Sentiment: <span id="sentiment"></span></li>
+                <li>Probability: <span id="probability"></span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
